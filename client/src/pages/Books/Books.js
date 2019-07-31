@@ -22,7 +22,7 @@ class Books extends Component {
     handleFormSubmit = event => {
         event.preventDefault();
         if (this.state.title) {
-            var title = this.state.title.trim()
+            const title = this.state.title.trim()
           API.getBook(title)
             .then(res => {
                 console.log(res.data.items);

@@ -51,10 +51,45 @@ class Saved extends Component {
                 </p>
                       </Jumbotron>
                       <Container>
-
+                      <h2>Saved Books</h2>
+          <List>
+            {this.state.books.map(book => (
+              <ListItem key={book._id}>
+                <div className="date-div">
+                  <a
+                    key={book._id + "link"}
+                    href={book.link}
+                    target={this.state.target}
+                  >
+                    {book.title}
+                  </a>
+                  <p>Written By {book.author}</p>
+                  <p>
+                  <img align="left" style={{paddingRight:10}}
+                    src={book.image} alt="new"
+                  />
+                    {book.description}
+                  </p>
+                </div>
+                <div className="book-btn-div">
+                  <Btn
+                    key={book._id + "btn"}
+                    btntype="info"
+                    id={book._id}
+                    disabled={book.link === "/"}
+                    onClick={() => this.deleteBook(book._id)}
+                  >
+                    ✗
+                </Btn>
+                </div>
+              </ListItem>
+            ))}
+          </List>
                       </Container>
                   </div>
-              )
+              );
           }
       }
 }
+
+export default Saved;
