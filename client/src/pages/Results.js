@@ -4,7 +4,7 @@ import { Container } from "../components/Grid";
 import { List, ListItem } from "../components/List";
 import Jumbotron from "../components/Jumbotron";
 import API from "../utils/API";
-import Btn from "../components/Btn";
+import DeleteBtn from "../components/DeleteBtn";
 
 class Results extends Component {
     state = {
@@ -87,7 +87,7 @@ class Results extends Component {
                       </p>
                     </div>
                     <div className="book-btn-div">
-                      <Btn
+                      <DeleteBtn
                         key={"" + book.id + index}
                         btntype="info"
                         disabled={book.volumeInfo.infoLink === "/"}
@@ -101,7 +101,7 @@ class Results extends Component {
                         })}
                       >
                         Save
-                      </Btn>
+                      </DeleteBtn>
                     </div>
                   </ListItem>
                 ))}
