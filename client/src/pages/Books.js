@@ -23,7 +23,7 @@ class Books extends Component {
         event.preventDefault();
         if (this.state.title) {
             const title = this.state.title.trim()
-          API.getBook(title)
+          API.getBooks(title)
             .then(res => {
                 console.log(res.data.items);
                 this.setState({
