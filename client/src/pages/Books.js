@@ -59,7 +59,7 @@ class Books extends Component {
                     onChange={this.handleInputChange}
                     name="title"
                     label="Book Title"
-                    placeholder="Search Book Title (required)"
+                    placeholder="Search for Books"
                   />
                   <FormBtn         
                     onClick={this.handleFormSubmit}
