@@ -63,7 +63,7 @@ class Saved extends Component {
                   >
                     {book.title}
                   </a>
-                  <p>Written By {book.author}</p>
+                  <p>By {book.author}</p>
                   <p>
                   <img align="left" style={{paddingRight:10}}
                     src={book.image} alt="new"
