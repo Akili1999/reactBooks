@@ -51,6 +51,15 @@ class Saved extends Component {
                 </p>
                       </Jumbotron>
                       <Container>
+                      <Link to="/">There are no saved books in your directory, start by saving some!.</Link>
+                     </Container>
+                     </div>
+              )
+          }
+
+          return (
+            <div>
+                      <Container>
                       <h2>Saved Books</h2>
           <List>
             {this.state.books.map(book => (
@@ -90,6 +99,5 @@ class Saved extends Component {
               );
           }
       }
-}
 
 export default Saved;
